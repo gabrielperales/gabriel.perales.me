@@ -4,11 +4,11 @@ date: '2025-03-29'
 tags: ['elixir', 'credo', 'custom', 'rule']
 draft: false
 summary: A guide to making a custom Credo rule
-images: []
+images: ['/static/images/blog/making-a-custom-credo-rule.png']
 type: 'Blog'
 ---
 
-# Making a Custom Credo Rule
+![Making a Custom Credo Rule](/static/images/blog/making-a-custom-credo-rule.png)
 
 Credo is a static code analysis tool for Elixir. It's a powerful tool that can help you catch bugs and improve your code quality.
 

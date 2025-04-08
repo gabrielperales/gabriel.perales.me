@@ -1,1 +1,13 @@
-{}
+{
+  "elixir": 3,
+  "structs": 1,
+  "embedded": 1,
+  "schemas": 1,
+  "ecto": 1,
+  "validation": 1,
+  "credo": 1,
+  "custom": 1,
+  "rule": 1,
+  "learning": 1,
+  "resources": 1
+}

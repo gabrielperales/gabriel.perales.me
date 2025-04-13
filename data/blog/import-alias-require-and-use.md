@@ -57,7 +57,7 @@ The `alias` directive creates a shortcut for a module name, making your code mor
 ```elixir
 defmodule MyApp.Controller do
   alias MyApp.Repo.User
-  
+
   def get_user(id) do
     # Now we can use User instead of MyApp.Repo.User
     User.get(id)
@@ -71,7 +71,7 @@ end
 defmodule MyApp.Controller do
   # This aliases MyApp.Repo.User to User and MyApp.Repo.Post to Post
   alias MyApp.Repo.{User, Post}
-  
+
   def get_recent_user_posts(user_id) do
     user = User.get(user_id)
     posts = Post.by_user(user_id)
@@ -87,7 +87,7 @@ You can also specify a custom alias name using the `as` option:
 ```elixir
 defmodule MyApp.Controller do
   alias Calendar.DateTime, as: DT
-  
+
   def current_time do
     DT.now!("UTC")
   end
@@ -113,7 +113,7 @@ While `alias` gives you a shortcut for the module name, **`import` brings the fu
 ```elixir
 defmodule MyApp.StringUtils do
   import String, only: [upcase: 1, downcase: 1]
-  
+
   def format(text, style) do
     case style do
       :upper -> upcase(text)  # Instead of String.upcase(text)
@@ -162,7 +162,7 @@ The `require` directive is specifically for working with macros. It ensures that
 ```elixir
 defmodule MyApp.Logger do
   require Logger
-  
+
   def log_error(message) do
     # Logger.error is a macro, not a function
     Logger.error(message)
@@ -200,7 +200,7 @@ The `use` directive is the most powerful and complex of the four. It allows a mo
 ```elixir
 defmodule MyApp.Controller do
   use Phoenix.Controller
-  
+
   def index(conn, _params) do
     render(conn, "index.html")
   end
@@ -218,7 +218,7 @@ defmodule MyBehavior do
       # This code gets injected into any module that uses MyBehavior
       import MyBehavior.Helpers
       alias MyBehavior.State
-      
+
       def initialize do
         IO.puts "Module initialized with options: #{inspect unquote(opts)}"
       end
@@ -257,20 +257,20 @@ Let's see how these directives work together in a real-world example:
 ```elixir
 defmodule MyApp.UserController do
   use Phoenix.Controller
-  
+
   alias MyApp.Repo
   alias MyApp.{User, Account}
-  
+
   import Plug.Conn
-  
+
   require Logger
-  
+
   def show(%Plug.Conn{} = conn, %{"id" => id}) do
     Logger.info("Showing user #{id}")
-    
+
     user = Repo.get(User, id)
     account = Repo.get_by(Account, user_id: id)
-    
+
     conn
     |> put_resp_header("x-user-id", id)
     |> render("show.html", user: user, account: account)
@@ -279,6 +279,7 @@ end
 ```
 
 In this example:
+
 - `use Phoenix.Controller` adds controller behavior and functionality (`render/2`)
 - `alias` creates shortcuts for the repository and schema modules (`Repo`, `User`, `Account`)
 - `import` brings Plug.Conn functions directly into scope (`put_resp_header/2`)
@@ -287,15 +288,10 @@ In this example:
 ## Best practices
 
 1. **Use alias for clarity**: Prefer aliases for most module references to keep code concise.
-   
 2. **Be selective with imports**: Only import the specific functions you need to avoid namespace pollution.
-   
 3. **Remember to require for macros**: Always require modules whose macros you intend to use.
-   
 4. **Understand what use does**: Before using a module, understand what code it injects into your module.
-   
 5. **Group your directives**: Keep your module directives organized at the top of your file in a logical order.
-   
 6. **Explicit is better than implicit**: When in doubt, be more explicit about where a function comes from.
 
 ## Conclusion

@@ -53,6 +53,7 @@ end
 ## Exploring Embedded Schemas
 
 Embedded schemas are part of Ecto's powerful toolkit for data mapping and validation. They're particularly useful when you need to:
+
 - Validate data from external sources (APIs, forms)
 - Transform data between different formats
 - Ensure data consistency without database persistence
@@ -172,6 +173,7 @@ end
 While structs and embedded schemas might seem similar at first glance, they serve different purposes in Elixir applications. Structs are perfect for simple, internal data structures where you need compile-time guarantees and minimal overhead. Embedded schemas, on the other hand, provide a robust solution for data validation, transformation, and complex data structures.
 
 The key to making the right choice lies in understanding your specific needs:
+
 - Do you need validation? → Embedded Schema
 - Is performance critical? → Struct
 - Are you working with external data? → Embedded Schema

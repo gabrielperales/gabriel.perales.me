@@ -19,7 +19,6 @@ In this post, I want to explain what OTP is and how it works. I'll start by expl
 
 - **Scalability**: scalability is the ability of a program to grow in performance and resources when the load increases. The BEAM (Erlang VM), the runtime environment for Erlang and Elixir, is designed to be scalable. It allows you to have thousands of concurrent processes running without a problem. It also allows you to distribute your code across multiple nodes, connected through a network, which allows you to scale your application horizontally.
 
-
 ## OTP Concurrency Model
 
 The OTP concurrency model is based on the concept of **processes**. Processes are the smallest unit of computation in OTP. They are isolated from each other and can run concurrently. Processes communicate with each other using **messages**.

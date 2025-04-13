@@ -1,5 +1,10 @@
 {
-  "elixir": 3,
+  "elixir": 4,
+  "import": 1,
+  "alias": 1,
+  "require": 1,
+  "use": 1,
+  "modules": 1,
   "structs": 1,
   "embedded": 1,
   "schemas": 1,

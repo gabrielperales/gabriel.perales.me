@@ -1,18 +1,18 @@
 {
   "elixir": 4,
+  "learning": 1,
+  "resources": 1,
   "import": 1,
   "alias": 1,
   "require": 1,
   "use": 1,
   "modules": 1,
+  "credo": 1,
+  "custom": 1,
+  "rule": 1,
   "structs": 1,
   "embedded": 1,
   "schemas": 1,
   "ecto": 1,
-  "validation": 1,
-  "credo": 1,
-  "custom": 1,
-  "rule": 1,
-  "learning": 1,
-  "resources": 1
+  "validation": 1
 }

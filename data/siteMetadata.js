@@ -24,14 +24,15 @@ const siteMetadata = {
   locale: 'en-US',
   // set to true if you want a navbar fixed to the top
   stickyNav: false,
+  // Piqo (https://piqo.app) - rendered manually in `app/layout.tsx` since it
+  // isn't a provider pliny's <Analytics> component supports, so it lives
+  // outside `analytics` (pliny types that key strictly as AnalyticsConfig).
+  piqoAnalytics: {
+    dataSite: 'gbli1at7',
+  },
   analytics: {
     // If you want to use an analytics provider you have to add it to the
     // content security policy in the `next.config.js` file.
-    // Piqo (https://piqo.app) - rendered manually in `app/layout.tsx` since
-    // it isn't a provider pliny's <Analytics> component supports.
-    piqoAnalytics: {
-      dataSite: 'gbli1at7',
-    },
     // plausibleAnalytics: {
     //   plausibleDataDomain: 'gabriel.perales.me', // e.g. tailwind-nextjs-starter-blog.vercel.app
     //   // If you are hosting your own Plausible.

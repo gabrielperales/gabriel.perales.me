@@ -98,7 +98,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <ThemeProviders>
           <Script
             defer
-            data-site={siteMetadata.analytics.piqoAnalytics.dataSite}
+            data-site={siteMetadata.piqoAnalytics.dataSite}
             data-domain={new URL(siteMetadata.siteUrl).hostname}
             src="https://piqo.app/piqo.js"
           />

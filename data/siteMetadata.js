@@ -24,11 +24,11 @@ const siteMetadata = {
   locale: 'en-US',
   // set to true if you want a navbar fixed to the top
   stickyNav: false,
-  // Piqo (https://piqo.app) - rendered manually in `app/layout.tsx` since it
+  // Kobbe (https://kobbe.io) - rendered manually in `app/layout.tsx` since it
   // isn't a provider pliny's <Analytics> component supports, so it lives
   // outside `analytics` (pliny types that key strictly as AnalyticsConfig).
-  piqoAnalytics: {
-    dataSite: 'gbli1at7',
+  kobbeAnalytics: {
+    token: '98d9ec49.yVU2W6m_-4gGSFnkA8fYj6geIB8mF6Nq',
   },
   analytics: {
     // If you want to use an analytics provider you have to add it to the

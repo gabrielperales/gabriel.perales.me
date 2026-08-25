@@ -98,9 +98,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <ThemeProviders>
           <Script
             defer
-            data-site={siteMetadata.piqoAnalytics.dataSite}
-            data-domain={new URL(siteMetadata.siteUrl).hostname}
-            src="https://piqo.app/piqo.js"
+            data-token={siteMetadata.kobbeAnalytics.token}
+            src="https://app.kobbe.io/tracker.js"
           />
           <SectionContainer>
             <SearchProvider searchConfig={siteMetadata.search as SearchConfig}>
